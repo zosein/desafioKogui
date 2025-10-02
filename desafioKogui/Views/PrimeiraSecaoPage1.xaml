@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="desafioKogui.Views.PrimeiraSecaoPage1"
+             xmlns:viewModels="clr-namespace:desafioKogui.ViewModels"
+             xmlns:models="clr-namespace:desafioKogui.Models"
+             x:DataType="viewModels:PrimeiraSecao"
+             Title="Primeira Seção: Listagem de Itens">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="0">
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <Label Grid.Column="0" 
+                       Text="COR" 
+                       FontSize="18" 
+                       FontAttributes="Bold" 
+                       TextColor="White" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center"
+                       Padding="20" />
+                
+                <Label Grid.Column="1" 
+                       Text="COMPONENTE" 
+                       FontSize="18" 
+                       FontAttributes="Bold" 
+                       TextColor="White" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center"
+                       Padding="20" />
+            </Grid>
+
+            <CollectionView ItemsSource="{Binding ItensChaveCor}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:ChaveCor">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" 
+                                    Stroke="WhiteSmoke" 
+                                    StrokeThickness="1">
+                                <Label Text="{Binding COR}" 
+                                       FontSize="18" 
+                                       FontAttributes="Bold" 
+                                       TextColor="White" 
+                                       HorizontalOptions="Center" 
+                                       VerticalOptions="Center"
+                                       Padding="15,20" />
+                            </Border>
+
+                            <Border Grid.Column="1" 
+                                    Stroke="WhiteSmoke" 
+                                    StrokeThickness="1">
+                                <Label Text="{Binding COMPONENTE}" 
+                                       FontSize="18" 
+                                       TextColor="White" 
+                                       HorizontalOptions="Center" 
+                                       VerticalOptions="Center"
+                                       Padding="15,20" />
+                            </Border>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

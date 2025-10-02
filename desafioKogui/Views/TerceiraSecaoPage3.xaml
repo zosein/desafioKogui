@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="desafioKogui.Views.TerceiraSecaoPage3"
+             xmlns:viewModels="clr-namespace:desafioKogui.ViewModels"
+             x:DataType="viewModels:TerceiraSecao"
+             Title="Terceira Seção: Enigma">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="15">
+            <Label
+                Text="Enigma Revelado:"
+                FontSize="20"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                />
+
+            <Frame BackgroundColor="Black" 
+                   HasShadow="True" 
+                   CornerRadius="10" 
+                   Padding="15"
+                   HorizontalOptions="Center">
+                <Label
+                    Text="{Binding EnigmaResultado}"
+                    TextColor="White"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="12"
+                    LineHeight="1.0"
+                    FontFamily="Courier New, monospace"
+                    />
+            </Frame>
+
+            <BoxView HeightRequest="2" Color="LightGray" />
+
+            <Label
+                Text="Nome do Objeto:"
+                FontSize="16"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                />
+
+            <Frame BackgroundColor="LightBlue" 
+                   HasShadow="True" 
+                   CornerRadius="15" 
+                   Padding="10"
+                   HorizontalOptions="Center">
+                <Label
+                    Text="{Binding NomeDoObjeto}"
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    TextColor="DarkBlue"
+                    HorizontalOptions="Center"
+                    />
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
