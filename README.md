@@ -15,3 +15,10 @@ A estrutura do projeto segue o padrão MVVM (Model-View-ViewModel) e está organ
 - Implementação deverá utilizar .NET MAUI na Plataforma Android com .NET 8 [Feito]
 - Apresentar Interface com as três seções [Feito]
 - Criação de Camadas de Serviço para acesso da API [Feito]
+
+
+<p float="left">
+  <img src="https://imgur.com/fEorFmv.jpg" width="200" />
+  <img src="https://imgur.com/hqmofea.jpg" width="200" />
+  <img src="https://imgur.com/l35DoKy.jpg" width="200" />
+</p>
